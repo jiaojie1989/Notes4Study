@@ -16,3 +16,9 @@ I am a blockquote
 
     void main()
     {}
+    
+*******
+
+-------
+
+This is a [I am a link](http://example.com "Title") inline link.
