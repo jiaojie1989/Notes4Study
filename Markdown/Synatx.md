@@ -22,3 +22,25 @@ I am a blockquote
 -------
 
 This is a [I am a link](http://example.com "Title") inline link.
+
+
+[id]: http://example.com/  "Optional Title Here"
+This is [an example][id] reference-style link.
+
+I get 10 times more traffic from [Google] [1] than from
+[Yahoo] [2] or [MSN] [3].
+
+  [1]: http://google.com/        "Google"
+  [2]: http://search.yahoo.com/  "Yahoo Search"
+  [3]: http://search.msn.com/    "MSN Search"
+  
+*I am em*
+_I am em too_
+**I am strong**
+__I am strong too__
+
+<address@example.com>
+  
+  
+  
+  
