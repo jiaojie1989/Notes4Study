@@ -1,4 +1,4 @@
-#! /usr/bin/php
+#! /usr/bin/env php
 <?php
 set_time_limit(0);
 
@@ -45,7 +45,7 @@ for($i = 70000;$i< 120000; $i++) {
         $type = '年租';
     }
     echo $i . ' | ' . $room . ' | ' . $price . ' | ' . $type . "\n" ;
-    
+    error_log(print_r($i . ' | ' . $room . ' | ' . $price . ' | ' . $type . "\n", 1), 3, './log');    
 
 
 
