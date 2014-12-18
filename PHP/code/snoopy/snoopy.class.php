@@ -33,14 +33,14 @@ class Snoopy
     /* user definable vars */
 
     var $scheme = 'http'; // http or https
-    var $host = "www.php.net"; // host name we are connecting to
+    var $host = "www.ziroom.com"; // host name we are connecting to
     var $port = 80; // port we are connecting to
     var $proxy_host = ""; // proxy host to use
     var $proxy_port = ""; // proxy port to use
     var $proxy_user = ""; // proxy user to use
     var $proxy_pass = ""; // proxy password to use
 
-    var $agent = "Snoopy v2.0.0"; // agent we masquerade as
+    var $agent = "数据采集"; // agent we masquerade as
     var $referer = ""; // referer info to pass
     var $cookies = array(); // array of cookies to pass
     // $cookies["username"]="joe";

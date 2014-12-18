@@ -1,13 +1,18 @@
-#! /usr/bin/env php
+#! /usr/bin/php
 <?php
 set_time_limit(0);
+
+$hash = md5(time());
 
 $url = "http://www.ziroom.com/z/vr/%s.html";
 include("snoopy.class.php");
 $snoopy = new Snoopy;
+$snoopy->agent = 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0); 360Spider';
+$snoopy->referer = "http://www.renren.com";
+$snoopy->rawheaders["X_FORWARDED_FOR"] = "172.16.5.111";
 
 
-for($i = 70000;$i< 120000; $i++) {
+for($i = 1;$i< 200000; $i++) {
     $url_n = sprintf($url, $i);
     //$snoopy->fetch($url); //获取所有内容
     
@@ -45,7 +50,7 @@ for($i = 70000;$i< 120000; $i++) {
         $type = '年租';
     }
     echo $i . ' | ' . $room . ' | ' . $price . ' | ' . $type . "\n" ;
-    error_log(print_r($i . ' | ' . $room . ' | ' . $price . ' | ' . $type . "\n", 1), 3, './log');    
+    error_log(print_r($i . ' ; ' . $room . ' ; ' . $price . ' ; ' . $type . "\n", 1), 3, './house.' . $hash . '.csv');    
 
 
 
